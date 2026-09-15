@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BatonTrump | $BatonTrump</title>
+  <meta name="description" content="BatonTrump brings bold energy, big memes, and unstoppable vibes. Grab your baton and march toward the moon." />
+  <meta name="theme-color" content="#052016" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta property="og:title" content="BatonTrump | $BatonTrump" />
+  <meta property="og:description" content="BatonTrump brings bold energy, big memes, and unstoppable vibes. Grab your baton and march toward the moon." />
+  <meta property="og:image" content="banner.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@500;600;700;800;900&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            baton: {
+              950: "#04150F",
+              900: "#052016",
+              800: "#0A3324",
+              700: "#0F4A34",
+              600: "#157A52",
+              500: "#1FAE6A",
+              400: "#2EE28A",
+              300: "#7AF3B4",
+              200: "#C8F8DE",
+              100: "#E8F8EE",
+            },
+            cream: "#F3EDE4",
+            foam: "#FFF8F0",
+            neon: "#5EF2FF",
+            sunset: "#FF5DA2",
+          },
+          fontFamily: {
+            display: ['"Bangers"', "cursive"],
+            neon: ['"Orbitron"', "sans-serif"],
+            body: ['"Nunito"', "sans-serif"],
+          },
+          boxShadow: {
+            glow: "0 0 40px rgba(31, 174, 106, 0.45)",
+            "glow-lg": "0 0 70px rgba(31, 174, 106, 0.55)",
+            neon: "0 0 28px rgba(94, 242, 255, 0.45)",
+            punch: "0 8px 0 #0F4A34, 0 16px 32px rgba(5, 32, 22, 0.45)",
+            "punch-hover": "0 4px 0 #0F4A34, 0 10px 24px rgba(5, 32, 22, 0.4)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root { --ca: "TBA"; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5.75rem;
+    }
+
+    html, body {
+      max-width: 100%;
+    }
+
+    #about, #howtobuy, #chart, #top {
+      scroll-margin-top: 5.75rem;
+    }
+
+    body {
+      font-family: "Nunito", sans-serif;
+      color: #F3EDE4;
+      background-color: #052016;
+      background-image:
+        linear-gradient(180deg, rgba(4, 21, 15, 0.55) 0%, rgba(4, 21, 15, 0.72) 38%, rgba(4, 21, 15, 0.88) 100%),
+        url("banner.jpg");
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: 768px) {
+      body { background-attachment: scroll; }
+    }
+
+    ::selection { background: #1FAE6A; color: #04150F; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #04150F; }
+    ::-webkit-scrollbar-thumb { background: #1FAE6A; border-radius: 99px; }
+
+    .grain::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 70;
+      opacity: 0.08;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.55'/></svg>");
+    }
+
+    .glass {
+      background: linear-gradient(180deg, rgba(5, 32, 22, 0.78), rgba(4, 21, 15, 0.88));
+      border: 1px solid rgba(46, 226, 138, 0.28);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 248, 240, 0.08),
+        0 24px 60px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(16px);
+    }
+
+    .neon-text {
+      color: #5EF2FF;
+      text-shadow:
+        0 0 8px rgba(94, 242, 255, 0.9),
+        0 0 24px rgba(94, 242, 255, 0.55),
+        0 0 48px rgba(31, 174, 106, 0.4);
+    }
+
+    .cream-glow {
+      text-shadow: 0 4px 0 #0F4A34, 0 10px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    .spotlights {
+      background:
+        radial-gradient(ellipse 24% 18% at 50% 0%, rgba(255, 248, 240, 0.22), transparent 70%),
+        radial-gradient(ellipse 18% 22% at 18% 8%, rgba(94, 242, 255, 0.12), transparent 70%),
+        radial-gradient(ellipse 18% 22% at 82% 8%, rgba(31, 174, 106, 0.16), transparent 70%);
+    }
+
+    .logo-ring {
+      background:
+        radial-gradient(circle at 50% 42%, rgba(243, 237, 228, 0.16), transparent 42%),
+        conic-gradient(from 180deg, #1FAE6A, #5EF2FF, #2EE28A, #F3EDE4, #1FAE6A);
+      animation: spin 14s linear infinite;
+    }
+
+    .bob { animation: bob 4.2s ease-in-out infinite; }
+    .float-slow { animation: floaty 7s ease-in-out infinite; }
+    .wiggle { animation: wiggle 2.2s ease-in-out infinite; }
+    .pulse-glow { animation: pulseGlow 2.6s ease-in-out infinite; }
+
+    .marquee-track {
+      animation: marquee 22s linear infinite;
+    }
+
+    @keyframes bob {
+      0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+      50% { transform: translateY(-14px) rotate(1.5deg); }
+    }
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-4deg); }
+      50% { transform: rotate(4deg); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 24px rgba(31, 174, 106, 0.35); }
+      50% { box-shadow: 0 0 48px rgba(94, 242, 255, 0.45); }
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .btn-buy {
+      background: linear-gradient(180deg, #7AF3B4 0%, #1FAE6A 48%, #157A52 100%);
+      color: #04150F;
+      box-shadow: 0 8px 0 #0A3324, 0 16px 28px rgba(31, 174, 106, 0.35);
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    }
+    .btn-buy:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.06);
+      box-shadow: 0 11px 0 #0A3324, 0 22px 36px rgba(31, 174, 106, 0.5);
+    }
+    .btn-buy:active {
+      transform: translateY(4px);
+      box-shadow: 0 3px 0 #0A3324, 0 8px 16px rgba(31, 174, 106, 0.3);
+    }
+
+    .btn-chart {
+      border: 2px solid #5EF2FF;
+      color: #5EF2FF;
+      background: rgba(4, 21, 15, 0.55);
+      box-shadow: 0 0 24px rgba(94, 242, 255, 0.22);
+      transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+    .btn-chart:hover {
+      transform: translateY(-3px);
+      background: rgba(94, 242, 255, 0.12);
+      box-shadow: 0 0 36px rgba(94, 242, 255, 0.4);
+    }
+
+    .stamp {
+      border: 3px dashed rgba(46, 226, 138, 0.7);
+      transform: rotate(-8deg);
+    }
+
+    .step-rail::before {
+      content: "";
+      position: absolute;
+      top: 2.1rem;
+      left: 12%;
+      right: 12%;
+      height: 4px;
+      background: repeating-linear-gradient(90deg, #F3EDE4 0 18px, transparent 18px 28px);
+      opacity: 0.35;
+    }
+    @media (max-width: 1279px) {
+      .step-rail::before { display: none; }
+    }
+
+    .toast {
+      opacity: 0;
+      transform: translate(-50%, 12px);
+      transition: opacity .25s ease, transform .25s ease;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .mobile-panel {
+      position: fixed;
+      left: 0.75rem;
+      right: 0.75rem;
+      top: 4.7rem;
+      z-index: 90;
+      width: auto;
+      background: rgba(4, 21, 15, 0.96);
+      transform: translateY(-8px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: transform .28s ease, opacity .28s ease, visibility .28s ease;
+    }
+    .mobile-panel.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body class="grain">
+  <div class="pointer-events-none fixed inset-0 spotlights z-0"></div>
+
+  <header class="sticky top-0 z-[100]">
+    <nav class="glass mx-auto mt-3 flex w-[min(1180px,calc(100%-1.25rem))] items-center justify-between rounded-full px-3 py-2 sm:px-5">
+      <a href="#top" class="flex items-center gap-2">
+        <img src="logo.png" alt="BatonTrump logo" class="h-11 w-11 rounded-full object-cover ring-2 ring-baton-400 shadow-glow" />
+        <span class="font-neon text-sm tracking-wider neon-text sm:text-base">BatonTrump</span>
+      </a>
+      <div class="hidden items-center gap-7 md:flex">
+        <a href="#about" class="text-sm font-extrabold text-cream/80 hover:text-baton-400">About</a>
+        <a href="#howtobuy" class="text-sm font-extrabold text-cream/80 hover:text-baton-400">How to Buy</a>
+        <a href="#chart" class="text-sm font-extrabold text-cream/80 hover:text-baton-400">Chart</a>
+      </div>
+      <div class="hidden items-center gap-3 md:flex">
+        <a href="https://t.me/BatonTrump" target="_blank" rel="noopener" class="overflow-hidden rounded-xl ring-1 ring-cream/20 hover:ring-baton-400">
+          <img src="tg.png" alt="Telegram" class="h-9 w-9 object-cover" />
+        </a>
+        <a href="https://x.com/BatonTrump" target="_blank" rel="noopener" class="overflow-hidden rounded-xl ring-1 ring-cream/20 hover:ring-neon">
+          <img src="x.png" alt="X / Twitter" class="h-9 w-9 object-cover" />
+        </a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="btn-buy rounded-full px-5 py-2 font-display text-xl tracking-wide">Buy Now</a>
+      </div>
+      <button id="menu-btn" class="rounded-full border border-baton-400/40 px-3 py-2 text-sm font-black text-cream md:hidden" aria-label="Open menu">MENU</button>
+    </nav>
+    <div id="mobile-menu" class="mobile-panel glass rounded-3xl p-5 md:hidden">
+      <div class="flex flex-col gap-4 text-center">
+        <a href="#about" class="font-extrabold text-cream">About</a>
+        <a href="#howtobuy" class="font-extrabold text-cream">How to Buy</a>
+        <a href="#chart" class="font-extrabold text-cream">Chart</a>
+        <div class="flex items-center justify-center gap-3">
+          <a href="https://t.me/BatonTrump" target="_blank" rel="noopener"><img src="tg.png" alt="Telegram" class="h-10 w-10 rounded-xl" /></a>
+          <a href="https://x.com/BatonTrump" target="_blank" rel="noopener"><img src="x.png" alt="X" class="h-10 w-10 rounded-xl" /></a>
+        </div>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="btn-buy rounded-full px-5 py-3 font-display text-2xl">Buy Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="relative z-10">
+    <section class="relative mx-auto flex min-h-[92vh] w-[min(1180px,calc(100%-1.25rem))] flex-col items-center justify-center gap-8 pb-16 pt-10 text-center lg:flex-row lg:text-left">
+      <div class="relative flex w-full max-w-xl justify-center lg:order-2">
+        <div class="logo-ring absolute inset-6 rounded-full blur-[1px] opacity-80"></div>
+        <div class="relative bob rounded-[2.4rem] bg-cream/10 p-3 ring-2 ring-baton-400/70 shadow-glow-lg">
+            <img src="logo.png" alt="BatonTrump mascot" class="h-[220px] w-[220px] rounded-[2rem] object-cover sm:h-[300px] sm:w-[300px] lg:h-[340px] lg:w-[340px]" />
+          <div class="stamp absolute -right-4 -top-3 rounded-xl bg-baton-900/90 px-3 py-1 font-display text-lg tracking-wide text-baton-400">TO THE MOON</div>
+        </div>
+      </div>
+
+      <div class="w-full max-w-xl lg:order-1">
+        <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-baton-400/40 bg-baton-900/60 px-4 py-1 text-xs font-black uppercase tracking-[0.28em] text-baton-300">
+          Solana Meme Relay
+        </p>
+        <h1 class="font-display text-6xl leading-[0.9] text-cream cream-glow sm:text-8xl">BATON<br />TRUMP</h1>
+        <p class="mt-2 font-neon text-lg tracking-[0.2em] neon-text">$BatonTrump</p>
+        <p class="mt-5 text-lg font-bold leading-relaxed text-cream/90 sm:text-xl">
+          BatonTrump brings bold energy, big memes, and unstoppable vibes. Grab your baton and march toward the moon.
+        </p>
+
+        <div class="mt-6 flex flex-col items-center gap-3 sm:flex-row lg:items-stretch">
+          <button id="copy-ca" class="glass flex w-full max-w-md cursor-pointer items-center justify-between gap-3 rounded-2xl px-4 py-3 text-left hover:border-baton-400">
+            <span class="min-w-0">
+              <span class="block text-[10px] font-black uppercase tracking-[0.24em] text-baton-300">Contract Address</span>
+              <span id="ca-display" class="block truncate font-neon text-sm text-cream">TBA</span>
+            </span>
+            <span id="copy-label" class="shrink-0 rounded-full bg-baton-500 px-3 py-1 text-xs font-black text-baton-950">Copy CA</span>
+          </button>
+        </div>
+
+        <div class="mt-5 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="btn-buy rounded-full px-8 py-3 font-display text-3xl tracking-wide">Buy Now</a>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener" class="btn-chart rounded-full px-8 py-3 font-display text-3xl tracking-wide">Chart</a>
+        </div>
+
+        <div class="mt-6 flex items-center justify-center gap-4 lg:justify-start">
+          <a href="https://t.me/BatonTrump" target="_blank" rel="noopener" class="overflow-hidden rounded-2xl ring-2 ring-baton-400/50 hover:shadow-glow">
+            <img src="tg.png" alt="Join Telegram" class="h-12 w-12 object-cover" />
+          </a>
+          <a href="https://x.com/BatonTrump" target="_blank" rel="noopener" class="overflow-hidden rounded-2xl ring-2 ring-neon/50 hover:shadow-neon">
+            <img src="x.png" alt="Follow on X" class="h-12 w-12 object-cover" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="relative overflow-hidden border-y border-baton-400/30 bg-baton-950/70 py-3">
+      <div class="marquee-track flex w-max gap-10 whitespace-nowrap font-display text-3xl tracking-wide text-cream">
+        <span>BATONTRUMP</span><span class="text-baton-400">•</span>
+        <span>$BatonTrump</span><span class="text-neon">•</span>
+        <span>MARCH TO THE MOON</span><span class="text-baton-400">•</span>
+        <span>SOLANA MEMES</span><span class="text-neon">•</span>
+        <span>GRAB THE BATON</span><span class="text-baton-400">•</span>
+        <span>UNSTOPPABLE VIBES</span><span class="text-neon">•</span>
+        <span>BATONTRUMP</span><span class="text-baton-400">•</span>
+        <span>$BatonTrump</span><span class="text-neon">•</span>
+        <span>MARCH TO THE MOON</span><span class="text-baton-400">•</span>
+        <span>SOLANA MEMES</span><span class="text-neon">•</span>
+        <span>GRAB THE BATON</span><span class="text-neon">•</span>
+        <span>UNSTOPPABLE VIBES</span>
+      </div>
+    </div>
+
+    <section id="about" class="mx-auto w-[min(1180px,calc(100%-1.25rem))] py-20">
+      <div class="grid items-center gap-8 lg:grid-cols-[1.1fr_.9fr]">
+        <div class="glass rounded-[2rem] p-7 sm:p-10">
+          <p class="font-display text-2xl tracking-wide text-baton-400">The Relay</p>
+          <h2 class="mt-2 font-display text-5xl cream-glow sm:text-6xl">Bold energy. Big memes.</h2>
+          <p class="mt-5 text-lg font-bold leading-relaxed text-cream/90">
+            BatonTrump is the green-handle legend passing unstoppable vibes down the chain. No slowing down, no dropping the stick — just a full-send march through Solana with memes loud enough to light up the skyline.
+          </p>
+          <p class="mt-4 text-lg font-bold leading-relaxed text-cream/80">
+            Grab your baton and march toward the moon. Name: <span class="text-baton-400">BatonTrump</span>. Symbol: <span class="text-neon">$BatonTrump</span>.
+          </p>
+          <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div class="rounded-2xl border border-baton-400/30 bg-baton-950/50 p-3 text-center">
+              <p class="text-[10px] font-black uppercase tracking-widest text-baton-300">Name</p>
+              <p class="font-display text-xl text-cream">BatonTrump</p>
+            </div>
+            <div class="rounded-2xl border border-baton-400/30 bg-baton-950/50 p-3 text-center">
+              <p class="text-[10px] font-black uppercase tracking-widest text-baton-300">Symbol</p>
+              <p class="font-display text-xl text-cream">$BatonTrump</p>
+            </div>
+            <div class="rounded-2xl border border-baton-400/30 bg-baton-950/50 p-3 text-center">
+              <p class="text-[10px] font-black uppercase tracking-widest text-baton-300">Chain</p>
+              <p class="font-display text-xl text-cream">Solana</p>
+            </div>
+            <div class="rounded-2xl border border-baton-400/30 bg-baton-950/50 p-3 text-center">
+              <p class="text-[10px] font-black uppercase tracking-widest text-baton-300">Vibe</p>
+              <p class="font-display text-xl text-cream">Moonbound</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative flex justify-center">
+          <div class="float-slow glass overflow-hidden rounded-[2rem] p-3">
+            <img src="banner.jpg" alt="BatonTrump banner" class="h-72 w-full rounded-[1.5rem] object-cover sm:h-80" />
+          </div>
+          <div class="wiggle absolute -bottom-4 left-6 rounded-2xl bg-baton-500 px-4 py-2 font-display text-2xl text-baton-950 shadow-punch">PASS IT UP</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="howtobuy" class="mx-auto w-[min(1180px,calc(100%-1.25rem))] pb-20">
+      <div class="mb-10 text-center">
+        <p class="font-display text-2xl tracking-wide text-baton-400">4 Easy Steps</p>
+        <h2 class="font-display text-5xl cream-glow sm:text-7xl">How to Buy</h2>
+        <p class="mx-auto mt-3 max-w-2xl font-bold text-cream/80">Pick up $BatonTrump on Solana. Wallet on. SOL in. Swap. March.</p>
+      </div>
+
+      <div class="relative grid gap-5 md:grid-cols-2 xl:grid-cols-4 step-rail">
+        <article class="glass relative rounded-[1.8rem] p-6">
+          <div class="mb-4 flex items-center justify-between">
+            <span class="font-neon text-3xl text-baton-400">01</span>
+            <span class="rounded-full bg-cream px-3 py-1 text-xs font-black text-baton-950">WALLET</span>
+          </div>
+          <h3 class="font-display text-3xl text-cream">Get a Solana Wallet</h3>
+          <p class="mt-3 font-bold leading-relaxed text-cream/80">Install Phantom or Solflare on your phone or browser. That’s your baton grip — keep it tight and never share your seed.</p>
+        </article>
+        <article class="glass relative rounded-[1.8rem] p-6">
+          <div class="mb-4 flex items-center justify-between">
+            <span class="font-neon text-3xl text-baton-400">02</span>
+            <span class="rounded-full bg-cream px-3 py-1 text-xs font-black text-baton-950">SOL</span>
+          </div>
+          <h3 class="font-display text-3xl text-cream">Load Up SOL</h3>
+          <p class="mt-3 font-bold leading-relaxed text-cream/80">Buy SOL on an exchange and send it to your wallet. You’ll need a little extra for the swap plus network fees.</p>
+        </article>
+        <article class="glass relative rounded-[1.8rem] p-6">
+          <div class="mb-4 flex items-center justify-between">
+            <span class="font-neon text-3xl text-neon">03</span>
+            <span class="rounded-full bg-baton-500 px-3 py-1 text-xs font-black text-baton-950">SWAP</span>
+          </div>
+          <h3 class="font-display text-3xl text-cream">Hit Buy Now</h3>
+          <p class="mt-3 font-bold leading-relaxed text-cream/80">Open the official pump.fun swap, connect your wallet, and get ready to grab $BatonTrump with SOL.</p>
+        </article>
+        <article class="glass relative rounded-[1.8rem] p-6">
+          <div class="mb-4 flex items-center justify-between">
+            <span class="font-neon text-3xl text-neon">04</span>
+            <span class="rounded-full bg-baton-500 px-3 py-1 text-xs font-black text-baton-950">MOON</span>
+          </div>
+          <h3 class="font-display text-3xl text-cream">Swap & March</h3>
+          <p class="mt-3 font-bold leading-relaxed text-cream/80">Paste the CA if needed, swap SOL for $BatonTrump, confirm, and start the moon march. Baton stays in your bag.</p>
+        </article>
+      </div>
+
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener" class="btn-buy rounded-full px-10 py-4 font-display text-3xl">Buy $BatonTrump</a>
+        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener" class="btn-chart rounded-full px-10 py-4 font-display text-3xl">View Chart</a>
+      </div>
+    </section>
+
+    <section id="chart" class="mx-auto w-[min(1180px,calc(100%-1.25rem))] pb-24">
+      <div class="mb-8 flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div>
+          <p class="font-display text-2xl tracking-wide text-neon">Live Action</p>
+          <h2 class="font-display text-5xl cream-glow sm:text-6xl">Chart</h2>
+        </div>
+        <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener" class="btn-chart rounded-full px-7 py-3 font-display text-2xl">Open Dexscreener</a>
+      </div>
+      <div class="glass overflow-hidden rounded-[2rem] p-2 sm:p-3">
+        <iframe
+          title="BatonTrump Dexscreener chart"
+          class="h-[420px] w-full rounded-[1.5rem] bg-baton-950 sm:h-[540px]"
+          src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+          allow="clipboard-write"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative z-10 border-t border-baton-400/20 bg-baton-950/80 py-10">
+    <div class="mx-auto flex w-[min(1180px,calc(100%-1.25rem))] flex-col items-center gap-4 text-center">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="" class="h-10 w-10 rounded-full object-cover ring-2 ring-baton-400" />
+        <span class="font-neon tracking-wider neon-text">BatonTrump</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/BatonTrump" target="_blank" rel="noopener"><img src="tg.png" alt="Telegram" class="h-9 w-9 rounded-lg" /></a>
+        <a href="https://x.com/BatonTrump" target="_blank" rel="noopener"><img src="x.png" alt="X" class="h-9 w-9 rounded-lg" /></a>
+      </div>
+      <p class="max-w-xl text-sm font-bold text-cream/60">$BatonTrump is a meme. For entertainment. DYOR. Not financial advice.</p>
+    </div>
+  </footer>
+
+    <div id="toast" class="toast pointer-events-none fixed bottom-6 left-1/2 z-[90] rounded-full border border-baton-400/50 bg-baton-900 px-5 py-3 font-display text-xl tracking-wide text-baton-400 shadow-glow">
+    CA copied. March on.
+  </div>
+
+  <script>
+    const CA = "TBA";
+    const copyBtn = document.getElementById("copy-ca");
+    const copyLabel = document.getElementById("copy-label");
+    const caDisplay = document.getElementById("ca-display");
+    const toast = document.getElementById("toast");
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    caDisplay.textContent = CA;
+
+    async function copyCA() {
+      try {
+        await navigator.clipboard.writeText(CA);
+      } catch (err) {
+        const range = document.createRange();
+        range.selectNodeContents(caDisplay);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        document.execCommand("copy");
+        selection.removeAllRanges();
+      }
+      toast.classList.add("show");
+      copyLabel.textContent = "Copied!";
+      setTimeout(() => {
+        toast.classList.remove("show");
+        copyLabel.textContent = "Copy CA";
+      }, 1800);
+    }
+
+    copyBtn.addEventListener("click", copyCA);
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+      menuBtn.textContent = mobileMenu.classList.contains("open") ? "CLOSE" : "MENU";
+    });
+
+    document.querySelectorAll("#mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        menuBtn.textContent = "MENU";
+      });
+    });
+  </script>
+</body>
+</html>
